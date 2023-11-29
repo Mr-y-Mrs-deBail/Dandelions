@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="img/icono2.png">
+    <link rel="stylesheet" href="style.css">
+    <title>Diente de león</title>
+</head>
+<body>
+
+    <div class="card">
+
+        <div class="wrapper">
+            <img class="cover" src="img/diente-de-leon2.jpg" alt="">
+        </div>
+
+        <img class="logo" src="img/logo.png" alt="">
+        <img class="logo1" src="img/logo1.png" alt="">
+
+        <img class="character" src="img/M.png" alt="">
+    </div>
+    
+    <section class="contenedor2">
+        <div class="player">
+            <div id="info" class="info">
+                <span class="artist">Dandelions</span>
+                <span class="name">Siempre Juntos♡</span>
+                <div id="progress-bar" class="progress-bar">
+                    <div class="bar"></div>
+                </div>
+            </div>
+            
+            <div id="control-panel" class="control-panel">
+                <div class="album-art">
+                    <img id="img1" class="img1" src="img/fondo.png" alt="">
+                </div>
+                <div class="controls">
+                    <div class="prev"></div>
+                    <div class="play" id="play"></div>
+                    <div class="next"></div>
+                </div>
+            </div>
+        </div>
+        
+        <audio id="Music" controls style="display: none;">
+            <source  src="audio/dandelions.mp3" type="audio/mpeg">
+        </audio>
+    </section>
+    
+    <div class="bubbles-animation1"><span class="dot"></span></div>
+    <div class="bubbles-animation2"></div>
+    <div class="bubbles-animation3"></div>
+    <div class="bubbles-animation4"></div>
+    <div class="bubbles-animation5"></div>
+    <div class="bubbles-animation6"></div>
+    <div class="bubbles-animation7"></div>
+    <div class="bubbles-animation8"></div>
+    <div class="bubbles-animation9"></div>
+    <div class="bubbles-animation10"></div>
+    <div class="bubbles-animation11"></div>
+    <div class="bubbles-animation12"></div>
+    <div class="bubbles-animation13"></div>
+    <div class="bubbles-animation14"></div>
+    <div class="bubbles-animation15"></div>
+    <div class="bubbles-animation16"></div>
+    <div class="bubbles-animation17"></div>
+    <div class="bubbles-animation18"></div>
+    <div class="bubbles-animation19"></div>
+    <div class="bubbles-animation20"></div>
+    <div class="bubbles-animation21"></div>
+    <div class="bubbles-animation22"></div>
+    <div class="bubbles-animation23"></div>
+    <div class="bubbles-animation24"></div>
+    <div class="bubbles-animation25"></div>
+  
+    <script>
+        class musicPlayer {
+        constructor() {
+        this.play = this.play.bind(this);
+        this.playBtn = document.getElementById('play');
+        this.playBtn.addEventListener('click', this.play);
+        this.controlPanel = document.getElementById('control-panel');
+        this.infoBar = document.getElementById('info');
+        this.status = false;
+        }
+
+       play() {
+        var audio = document.getElementById('Music'); 
+        let controlPanelObj = this.controlPanel,
+        infoBarObj = this.infoBar
+        Array.from(controlPanelObj.classList).find(function(element){   
+        return element !== "active" ? controlPanelObj.classList.add('active') : controlPanelObj.classList.remove('active');       
+        });
+
+       Array.from(infoBarObj.classList).find(function(element){
+        return element !== "active" ? infoBarObj.classList.add('active') : infoBarObj.classList.remove('active');
+        });
+
+       this.status = !this.status;
+
+       if(this.status == true){
+        audio.play();
+        let progressBar = document.getElementById('progress-bar');
+        let bar = progressBar.querySelector('.bar');
+        let progressInterval = setInterval(() => {
+            let audioDuration = audio.duration;
+            let audioCurrentTime = audio.currentTime;
+            let progressPercentage = (audioCurrentTime / audioDuration) * 100;
+            bar.style.width = `${progressPercentage}%`;
+            if (audioCurrentTime === audioDuration) {
+                clearInterval(progressInterval);
+            }
+        }, 1000);
+     } else {
+        audio.pause();
+       }
+      }
+     }
+
+     let player = new musicPlayer();
+
+     let nextBtn = document.querySelector('.next');
+     let prevBtn = document.querySelector('.prev');
+
+     nextBtn.addEventListener('click', function() {
+     var audio = document.getElementById('Music');
+     audio.currentTime += 10;
+     });
+
+     prevBtn.addEventListener('click', function() {
+     var audio = document.getElementById('Music');
+     audio.currentTime -= 10;
+     });
+
+    </script>
+
+    <script>
+        document.getElementById("img1").addEventListener("click", function() {
+        window.location.href = "https://youtu.be/RRoehLgyoIg?si=Kd45IQSqEdDD8E-l";
+        });
+    </script>
+    
+</body>
+
+</html>

@@ -1,8 +1,8 @@
-*{
+* {
     box-sizing: border-box;
 }
 
-body{
+body {
   width: 100%;
   height: 100vh;
   margin: 0;
@@ -15,7 +15,9 @@ body{
   -moz-osx-font-smoothing: grayscale;
 }
 
-.card{
+/* card */
+
+.card {
   width: 300px;
   height: 455px;
   position: relative;
@@ -28,13 +30,13 @@ body{
   border-radius: 30px;
 }
 
-.cover{
+.cover {
   width: 100%;
   height: 100%;
   object-fit: cover;
 }
 
-.wrapper{
+.wrapper {
   transition: all 0.5s;
   position: absolute;
   width: 100%;
@@ -51,7 +53,7 @@ body{
               rgba(0, 0, 0, 0.22) 0px 10px 10px;
 }
 
-.card:hover .wrapper{
+.card:hover .wrapper {
   transform: perspective(900px) translateY(-5%) rotateX(25deg) translateZ(0);
   box-shadow: 2px 35px 32px -8px rgba(0, 0, 0, 0.75);
   -webkit-box-shadow: 2px 35px 32px -8px rgba(0, 0, 0, 0.75);
@@ -128,13 +130,14 @@ body{
   z-index: -1;
 }
 
-.card:hover .character{
+.card:hover .character {
   opacity: 1;
   transform: translate3d(5%, -20%, 670px);
 }
 
+/* Reproductor de música */
 
-.contenedor2{
+.contenedor2 {
   position: absolute;
   margin-bottom: -70%;
   height: 20vh;
@@ -215,6 +218,10 @@ body{
   transition: all 0.5s ease;
 }
 
+.textFondo {
+  font-size: 10px;
+}
+
 .img1 {
   position: absolute;
   width: 100%;
@@ -285,11 +292,10 @@ body{
   background-image: url(img/stop.png);
 }
 
-.bubbles-animation1{
-  top: 30%;
-  left: 10%;
-  height: 8px;
-  width: 8px;
+/* Estilos para las luciernagas */
+
+.fireflies {
+  position: absolute;
   background: rgb(201, 255, 5);
   box-shadow: 
   0px 0px 10px rgb(184, 211, 29),
@@ -298,445 +304,235 @@ body{
   0px 0px 40px rgb(230, 255, 5),
   0px 0px 50px rgb(218, 255, 5);
   border-radius: 50px;
-  position: absolute;
+} 
+
+.firefly1{
+  top: 30%;
+  left: 10%;
+  height: 8px;
+  width: 8px;
   animation: animate 7s linear infinite;
   z-index: 100;
 }
   
-.bubbles-animation2{
+.firefly2{
   top: 60%;
   left: 90%;
-  animation: animate 10s linear infinite;
   height: 5px;
   width: 5px;
-  background: rgb(221, 201, 19);
-  box-shadow: 
-  0px 0px 10px rgb(230, 227, 22),
-  0px 0px 20px rgb(170, 173, 20),
-  0px 0px 30px rgb(216, 238, 23),
-  0px 0px 40px rgb(230, 255, 5),
-  0px 0px 50px rgb(218, 255, 5);  
-  border-radius: 50px;
-  position: absolute;
+  animation: animate 10s linear infinite;
   z-index: 100;
 }
   
-.bubbles-animation3{
+.firefly3{
   top: 40%;
   left: 40%;
-  animation: animate 15s linear infinite;
   height: 10px;
   width: 10px;
-  background: rgb(255, 251, 5);
-  box-shadow: 
-  0px 0px 10px rgb(184, 211, 29),
-  0px 0px 20px rgb(255, 251, 5),
-  0px 0px 30px rgb(218, 255, 5),
-  0px 0px 40px rgb(230, 255, 5),
-  0px 0px 50px rgb(218, 255, 5);  
-  border-radius: 50px;
-  position: absolute;
+  animation: animate 15s linear infinite;
   z-index: 100;
 }
   
-.bubbles-animation4{
+.firefly4{
   top: 66%;
   left: 30%;
-  animation: animate 7s linear infinite;
   height: 9px;
   width: 9px;
-  background: rgb(238, 255, 5);
-  box-shadow: 
-  0px 0px 10px rgb(184, 211, 29),
-  0px 0px 20px rgb(255, 251, 5),
-  0px 0px 30px rgb(218, 255, 5),
-  0px 0px 40px rgb(230, 255, 5),
-  0px 0px 50px rgb(218, 255, 5); 
-  border-radius: 50px;
-  position: absolute;
+  animation: animate 7s linear infinite;
   z-index: 100;
 }
   
-.bubbles-animation5{
+.firefly5{
   top: 89%;
   left: 5%;
-  animation: animate 9s linear infinite;
   height: 5px;
   width: 5px;
-  background: rgb(255, 251, 5);
-  box-shadow: 
-  0px 0px 10px rgb(184, 211, 29),
-  0px 0px 20px rgb(255, 251, 5),
-  0px 0px 30px rgb(218, 255, 5),
-  0px 0px 40px rgb(230, 255, 5),
-  0px 0px 50px rgb(218, 255, 5);  
-  border-radius: 50px;
-  position: absolute;
+  animation: animate 9s linear infinite;
   z-index: 100;
 }
   
-.bubbles-animation6{
+.firefly6{
   top: 30%;
   left: 95%;
-  animation: animate 10s linear infinite;
   height: 9px;
   width: 9px;
-  background: rgb(218, 255, 5);
-  box-shadow: 
-  0px 0px 10px rgb(184, 211, 29),
-  0px 0px 20px rgb(255, 251, 5),
-  0px 0px 30px rgb(218, 255, 5),
-  0px 0px 40px rgb(230, 255, 5),
-  0px 0px 50px rgb(218, 255, 5); 
-  border-radius: 50px;
-  position: absolute;
+  animation: animate 10s linear infinite;
   z-index: 100;
 }
   
-.bubbles-animation7{
+.firefly7{
   top: 80%;    
   left: 18%;
-  animation: animate 4s linear infinite;
   z-index: 100;
   height: 7px;
   width: 7px;
-  background: rgb(238, 255, 5);
-  box-shadow: 
-  0px 0px 10px rgb(184, 211, 29),
-  0px 0px 20px rgb(255, 251, 5),
-  0px 0px 30px rgb(218, 255, 5),
-  0px 0px 40px rgb(230, 255, 5),
-  0px 0px 50px rgb(218, 255, 5);  
-  border-radius: 50px;
-  position: absolute;
+  animation: animate 4s linear infinite;
   z-index: 100;
 }
   
-.bubbles-animation8{
+.firefly8{
   top: 115%;
   left: 60%;
-  animation: animate 10s linear infinite;
   z-index: 100;
   height: 5px;
   width: 5px;
-  background: rgb(238, 255, 5);
-  box-shadow: 
-  0px 0px 10px rgb(184, 211, 29),
-  0px 0px 20px rgb(255, 251, 5),
-  0px 0px 30px rgb(218, 255, 5),
-  0px 0px 40px rgb(230, 255, 5),
-  0px 0px 50px rgb(218, 255, 5);  
-  border-radius: 50px;
-  position: absolute;
+  animation: animate 10s linear infinite;
   z-index: 100;
 }
   
-.bubbles-animation9{
+.firefly9{
   top: 50%;
   left: 60%;
-  animation: animate 13s linear infinite;
   z-index: 100;
   height: 7px;
   width: 7px;
-  background: rgb(238, 255, 5);
-  box-shadow: 
-  0px 0px 10px rgb(184, 211, 29),
-  0px 0px 20px rgb(255, 251, 5),
-  0px 0px 30px rgb(218, 255, 5),
-  0px 0px 40px rgb(230, 255, 5),
-  0px 0px 50px rgb(218, 255, 5);  
-  border-radius: 50px;
-  position: absolute;
+  animation: animate 13s linear infinite;
   z-index: 100;
 }
 
-.bubbles-animation10{
+.firefly10{
   top: 45%;
   left: 20%;
-  animation: animate 6s linear infinite;
   height: 5px;
   width: 5px;
-  background: rgb(238, 255, 5);
-  box-shadow: 
-  0px 0px 10px rgb(184, 211, 29),
-  0px 0px 20px rgb(255, 251, 5),
-  0px 0px 30px rgb(218, 255, 5),
-  0px 0px 40px rgb(230, 255, 5),
-  0px 0px 50px rgb(218, 255, 5);  
-  border-radius: 50px;
-  position: absolute;
+  animation: animate 6s linear infinite;
   z-index: 100;
 }
 
-.bubbles-animation11{
+.firefly11{
   top: 10%;
   left: 85%;
-  animation: animate 13s linear infinite;
   height: 5px;
   width: 5px;
-  background: rgb(238, 255, 5);
-  box-shadow: 
-  0px 0px 10px rgb(184, 211, 29),
-  0px 0px 20px rgb(255, 251, 5),
-  0px 0px 30px rgb(218, 255, 5),
-  0px 0px 40px rgb(230, 255, 5),
-  0px 0px 50px rgb(218, 255, 5);  
-  border-radius: 50px;
-  position: absolute;
+  animation: animate 13s linear infinite;
   z-index: 100;
 }
   
-.bubbles-animation12{
+.firefly12{
   top: 20%;
   left: 80%;
-  animation: animate 10s linear infinite;
-  z-index: 100;
   height: 8px;
   width: 8px;
-  background: rgb(238, 255, 5);
-  box-shadow: 
-  0px 0px 10px rgb(184, 211, 29),
-  0px 0px 20px rgb(255, 251, 5),
-  0px 0px 30px rgb(218, 255, 5),
-  0px 0px 40px rgb(230, 255, 5),
-  0px 0px 50px rgb(218, 255, 5);  
-  border-radius: 50px;
-  position: absolute;
+  animation: animate 10s linear infinite;
+  z-index: 100;
 }
   
-.bubbles-animation13{
+.firefly13{
   top: 20%;
   left: 15%;
-  animation: animate 14s linear infinite;
-  z-index: 100;
   height: 10px;
   width: 10px;
-  background: rgb(238, 255, 5);
-  box-shadow: 
-  0px 0px 10px rgb(184, 211, 29),
-  0px 0px 20px rgb(255, 251, 5),
-  0px 0px 30px rgb(218, 255, 5),
-  0px 0px 40px rgb(230, 255, 5),
-  0px 0px 50px rgb(218, 255, 5);  
-  border-radius: 50px;
-  position: absolute;
+  animation: animate 14s linear infinite;
+  z-index: 100;
 }
   
-.bubbles-animation14{
+.firefly14{
   top: 65%;
   left: 5%;
-  animation: animate 5s linear infinite;
-  z-index: 100;
   height: 8px;
   width: 8px;
-  background: rgb(238, 255, 5);
-  box-shadow: 
-  0px 0px 10px rgb(184, 211, 29),
-  0px 0px 20px rgb(255, 251, 5),
-  0px 0px 30px rgb(218, 255, 5),
-  0px 0px 40px rgb(230, 255, 5),
-  0px 0px 50px rgb(218, 255, 5);  
-  border-radius: 50px;
-  position: absolute;
+  animation: animate 5s linear infinite;
+  z-index: 100;
 }
   
-.bubbles-animation15{
+.firefly15{
   top: 110%;
   left: 70%;
+  height: 5px;
+  width: 5px;
   animation: animate 8s linear infinite;
   z-index: 100;
-  height: 5px;
-  width: 5px;
-  background: rgb(238, 255, 5);
-  box-shadow: 
-  0px 0px 10px rgb(184, 211, 29),
-  0px 0px 20px rgb(255, 251, 5),
-  0px 0px 30px rgb(218, 255, 5),
-  0px 0px 40px rgb(230, 255, 5),
-  0px 0px 50px rgb(218, 255, 5);  
-  border-radius: 50px;
-  position: absolute;
 }
   
-.bubbles-animation16{
+.firefly16{
   top: 125%;
   left: 80%;
-  animation: animate 5s linear infinite;
-  z-index: 100;
   height: 5px;
   width: 5px;
-  background: rgb(238, 255, 5);
-  box-shadow: 
-  0px 0px 10px rgb(184, 211, 29),
-  0px 0px 20px rgb(255, 251, 5),
-  0px 0px 30px rgb(218, 255, 5),
-  0px 0px 40px rgb(230, 255, 5),
-  0px 0px 50px rgb(218, 255, 5);  
-  border-radius: 50px;
-  position: absolute;
+  animation: animate 5s linear infinite;
+  z-index: 100;
 }
   
-.bubbles-animation17{
+.firefly17{
   top: 45%;
   left: 28%;
-  animation: animate 10s linear infinite;
-  z-index: 100;
   height: 8px;
   width: 8px;
-  background: rgb(238, 255, 5);
-  box-shadow: 
-  0px 0px 10px rgb(184, 211, 29),
-  0px 0px 20px rgb(255, 251, 5),
-  0px 0px 30px rgb(218, 255, 5),
-  0px 0px 40px rgb(230, 255, 5),
-  0px 0px 50px rgb(218, 255, 5);  
-  border-radius: 50px;
-  position: absolute;
+  animation: animate 10s linear infinite;
+  z-index: 100;
 }
   
-.bubbles-animation18{
+.firefly18{
   top: 115%;
   left: 25%;
+  height: 5px;
+  width: 5px;
   animation: animate 5s linear infinite;
   z-index: 100;
-  height: 5px;
-  width: 5px;
-  background: rgb(238, 255, 5);
-  box-shadow: 
-  0px 0px 10px rgb(184, 211, 29),
-  0px 0px 20px rgb(255, 251, 5),
-  0px 0px 30px rgb(218, 255, 5),
-  0px 0px 40px rgb(230, 255, 5),
-  0px 0px 50px rgb(218, 255, 5);  
-  border-radius: 50px;
-  position: absolute;
 }
   
-.bubbles-animation19{
+.firefly19{
   top: 110%;
   left: 95%;
-  animation: animate 10s linear infinite;
-  z-index: 100;
   height: 5px;
   width: 5px;
-  background: rgb(238, 255, 5);
-  box-shadow: 
-  0px 0px 10px rgb(184, 211, 29),
-  0px 0px 20px rgb(255, 251, 5),
-  0px 0px 30px rgb(218, 255, 5),
-  0px 0px 40px rgb(230, 255, 5),
-  0px 0px 50px rgb(218, 255, 5);   
-  border-radius: 50px;
-  position: absolute;
+  animation: animate 10s linear infinite;
+  z-index: 100;
 }
   
-.bubbles-animation20{
+.firefly20{
   top: 59%;
   left: 78%;
+  height: 3px;
+  width: 3px;
   animation: animate 7s linear infinite;
   z-index: 100;
-  height: 3px;
-  width: 3px;
-  background: rgb(238, 255, 5);
-  box-shadow: 
-  0px 0px 10px rgb(184, 211, 29),
-  0px 0px 20px rgb(255, 251, 5),
-  0px 0px 30px rgb(218, 255, 5),
-  0px 0px 40px rgb(230, 255, 5),
-  0px 0px 50px rgb(218, 255, 5);   
-  border-radius: 50px;
-  position: absolute;
 }
   
-.bubbles-animation21{
+.firefly21{
   top: 105%;
   left: 56%;
+  height: 3px;
+  width: 3px;
   animation: animate 6s linear infinite;
   z-index: 100;
-  height: 3px;
-  width: 3px;
-  background: rgb(238, 255, 5);
-  box-shadow: 
-  0px 0px 10px rgb(184, 211, 29),
-  0px 0px 20px rgb(255, 251, 5),
-  0px 0px 30px rgb(218, 255, 5),
-  0px 0px 40px rgb(230, 255, 5),
-  0px 0px 50px rgb(218, 255, 5);  
-  border-radius: 50px;
-  position: absolute;
 }
   
-.bubbles-animation22{
+.firefly22{
   top: 126%;
   left: 65%;
-  animation: animate 4s linear infinite;
-  z-index: 100;
   height: 3px;
   width: 3px;
-  background: rgb(238, 255, 5);
-  box-shadow: 
-  0px 0px 10px rgb(184, 211, 29),
-  0px 0px 20px rgb(255, 251, 5),
-  0px 0px 30px rgb(218, 255, 5),
-  0px 0px 40px rgb(230, 255, 5),
-  0px 0px 50px rgb(218, 255, 5);  
-  border-radius: 50px;
-  position: absolute;
+  animation: animate 4s linear infinite;
+  z-index: 100;
 }
   
   
-.bubbles-animation23{
+.firefly23{
   top: 35%;
   left: 4%;
-  animation: animate 10s linear infinite;
-  z-index: 100;
   height: 6px;
   width: 6px;
-  background: rgb(238, 255, 5);
-  box-shadow: 
-  0px 0px 10px rgb(184, 211, 29),
-  0px 0px 20px rgb(255, 251, 5),
-  0px 0px 30px rgb(218, 255, 5),
-  0px 0px 40px rgb(230, 255, 5),
-  0px 0px 50px rgb(218, 255, 5);  
-  border-radius: 50px;
-  position: absolute;
+  animation: animate 10s linear infinite;
+  z-index: 100;
 }
   
-.bubbles-animation24{
+.firefly24{
   top: 60%;
   left: 13%;
-  animation: animate 12s linear infinite;
-  z-index: 100;
   height: 4px;
   width: 4px;
-  background: rgb(238, 255, 5);
-  box-shadow: 
-  0px 0px 10px rgb(184, 211, 29),
-  0px 0px 20px rgb(255, 251, 5),
-  0px 0px 30px rgb(218, 255, 5),
-  0px 0px 40px rgb(230, 255, 5),
-  0px 0px 50px rgb(218, 255, 5);  
-  border-radius: 50px;
-  position: absolute;
+  animation: animate 12s linear infinite;
+  z-index: 100;
 }
   
-.bubbles-animation25{
+.firefly25{
   top: 115%;
   left: 35%;
-  animation: animate 10s linear infinite;
-  z-index: 100;
   height: 6px;
   width: 6px;
-  background: rgb(238, 255, 5);
-  box-shadow: 
-  0px 0px 10px rgb(184, 211, 29),
-  0px 0px 20px rgb(255, 251, 5),
-  0px 0px 30px rgb(218, 255, 5),
-  0px 0px 40px rgb(230, 255, 5),
-  0px 0px 50px rgb(218, 255, 5);  
-  border-radius: 50px;
-  position: absolute;
+  animation: animate 10s linear infinite;
+  z-index: 100;
 }
   
 @keyframes animate {
